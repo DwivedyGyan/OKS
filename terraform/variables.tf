@@ -12,3 +12,13 @@ variable "cluster_name" {
   type = string
   default = "kube"
 }
+
+variable "node_pool_node_shape" {
+  type = string
+  default = "VM.Standard.E3.Flex"
+}
+
+variable "node_pool_node_config_details_size" {
+  type = integer
+  default = 3
+}

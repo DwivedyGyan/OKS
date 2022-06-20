@@ -10,3 +10,8 @@ variable "compartment_id" {
 variable "vcn_display_name" {
   type = string
 }
+
+variable "subnet_cidr_block" {
+  type = string
+  default = "10.10.30.0/28"
+}
