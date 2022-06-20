@@ -115,14 +115,14 @@ resource "oci_containerengine_node_pool" "test_node_pool" {
     #     memory_in_gbs = var.node_pool_node_shape_config_memory_in_gbs
     #     ocpus = var.node_pool_node_shape_config_ocpus
     # }
-    # node_source_details {
-    #     #Required
-    #     image_id = oci_core_image.test_image.id
-    #     source_type = var.node_pool_node_source_details_source_type
+    node_source_details {
+        #Required
+        image_id = "ocid1.image.oc1.ap-mumbai-1.aaaaaaaajtjrqgsa775zbcinia33cwvztztcqlbrikdcxv5hfmbhyu37as3a"
+        source_type = "IMAGE"
 
-        # #Optional
+        #Optional
         # boot_volume_size_in_gbs = var.node_pool_node_source_details_boot_volume_size_in_gbs
-    # }
+    }
     # quantity_per_subnet = var.node_pool_quantity_per_subnet
     # ssh_public_key = var.node_pool_ssh_public_key
     # subnet_ids = var.node_pool_subnet_ids
