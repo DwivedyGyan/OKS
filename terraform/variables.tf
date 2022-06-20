@@ -4,9 +4,11 @@ variable "compartment_id" {
 }
 
 variable "cluster_kubernetes_version" {
-  type = string  
+  type = string
+  default = "v1.23.4"
 }
 
 variable "cluster_name" {
   type = string
+  default = "kube"
 }
