@@ -19,6 +19,6 @@ variable "node_pool_node_shape" {
 }
 
 variable "node_pool_node_config_details_size" {
-  type = integer
+  type = number
   default = 3
 }
