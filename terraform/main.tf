@@ -78,7 +78,7 @@ resource "oci_containerengine_node_pool" "test_node_pool" {
     cluster_id = oci_containerengine_cluster.test_cluster.id
     compartment_id = var.compartment_id
     name = "node_pool1"
-    node_shape = var.node_pool_node_shape
+    #node_shape = var.node_pool_node_shape
 
     # #Optional
     # defined_tags = {"Operations.CostCenter"= "42"}
