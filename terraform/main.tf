@@ -1,7 +1,11 @@
-module "vcn" {
-  source = "./modules/vcn"
-  compartment_id = var.compartment_id
-  vcn_display_name = "kube-vcn"
+# module "vcn" {
+#   source = "./modules/vcn"
+#   compartment_id = var.compartment_id
+#   vcn_display_name = "kube-vcn"
+# }
+
+data "oci_core_subnet" "test_subnet" {
+    subnet_id = var.subnet_id
 }
 
 resource "oci_containerengine_cluster" "test_cluster" {
@@ -9,7 +13,7 @@ resource "oci_containerengine_cluster" "test_cluster" {
     compartment_id = var.compartment_id
     kubernetes_version = var.cluster_kubernetes_version
     name = var.cluster_name
-    vcn_id = module.vcn.vcn_id
+    vcn_id = data.oci_core_subnet.test_subnet.vcn_id
 
     # #Optional
     # defined_tags = {"Operations.CostCenter"= "42"}

@@ -3,6 +3,13 @@ variable "compartment_id" {
   default = "ocid1.tenancy.oc1..aaaaaaaa3kxlkkmpaaar5vamcwcpl5gxiyxtiktgxyav7s5whuxbdmjbyeia"
 }
 
+variable "subnet_id" {
+  type = string
+  default = "ocid1.subnet.oc1.ap-mumbai-1.aaaaaaaacpeq5ui4vwkpkfx6vzkordjbc5v3rtz6lry4ltlvpt5cjpnv57pa"
+}
+
+
+
 variable "cluster_kubernetes_version" {
   type = string
   default = "v1.23.4"
