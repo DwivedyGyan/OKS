@@ -96,7 +96,7 @@ resource "oci_containerengine_node_pool" "test_node_pool" {
             #Required
             # availability_domain = var.node_pool_node_config_details_placement_configs_availability_domain
             availability_domain = "xNCC:AP-MUMBAI-I-AD-1"
-            subnet_id = module.vcn.subnet_id
+            subnet_id = var.subnet_id
 
             # #Optional
             # capacity_reservation_id = oci_containerengine_capacity_reservation.test_capacity_reservation.id
