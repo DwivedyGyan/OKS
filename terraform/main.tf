@@ -95,7 +95,7 @@ resource "oci_containerengine_node_pool" "test_node_pool" {
         placement_configs {
             #Required
             # availability_domain = var.node_pool_node_config_details_placement_configs_availability_domain
-            availability_domain = "xNCC:AP-MUMBAI-I-AD-1"
+            availability_domain = "xNCC:AP-MUMBAI-1-AD-1"
             subnet_id = var.subnet_id
 
             # #Optional
@@ -121,13 +121,13 @@ resource "oci_containerengine_node_pool" "test_node_pool" {
     # }
     node_source_details {
         #Required
-        image_id = "ocid1.image.oc1.ap-mumbai-1.aaaaaaaajtjrqgsa775zbcinia33cwvztztcqlbrikdcxv5hfmbhyu37as3a"
+        image_id = "ocid1.image.oc1.ap-mumbai-1.aaaaaaaaykbqyfrl3pwkotoi7f5d32rqrfgdhwdh3hs3a2yzwt4r4qzjxicq"
         source_type = "IMAGE"
 
         #Optional
         # boot_volume_size_in_gbs = var.node_pool_node_source_details_boot_volume_size_in_gbs
     }
     # quantity_per_subnet = var.node_pool_quantity_per_subnet
-    # ssh_public_key = var.node_pool_ssh_public_key
+    ssh_public_key = var.node_pool_ssh_public_key
     # subnet_ids = var.node_pool_subnet_ids
 }
