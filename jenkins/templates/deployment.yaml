@@ -40,8 +40,8 @@ spec:
           livenessProbe:
             failureThreshold: 12
             httpGet:
-              path: /login
-              port: 8080
+              path: /
+              port: 80
               scheme: HTTP
             initialDelaySeconds: 90
             periodSeconds: 10
@@ -50,8 +50,8 @@ spec:
           readinessProbe:
             failureThreshold: 3
             httpGet:
-              path: /login
-              port: 8080
+              path: /
+              port: 80
               scheme: HTTP
             initialDelaySeconds: 60
             periodSeconds: 10

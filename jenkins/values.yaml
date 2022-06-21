@@ -5,7 +5,8 @@
 replicaCount: 1
 
 image:
-  repository: docker.io/jenkins/jenkins
+  # repository: docker.io/jenkins/jenkins
+  repository: nginx
   pullPolicy: Always
   # Overrides the image tag whose default is the chart appVersion.
   tag: lts-jdk11
@@ -38,7 +39,7 @@ securityContext: {}
 
 service:
   type: NodePort
-  port: 8080
+  port: 80
 
 ingress:
   enabled: false
