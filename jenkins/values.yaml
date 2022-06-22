@@ -6,10 +6,10 @@ replicaCount: 1
 
 image:
   # repository: docker.io/jenkins/jenkins
-  repository: nginx
+  repository: docker.io/jenkins/jenkins
   pullPolicy: Always
   # Overrides the image tag whose default is the chart appVersion.
-  tag: ""
+  tag: lts-jdk11
 
 imagePullSecrets: []
 nameOverride: ""
