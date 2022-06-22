@@ -1,0 +1,16 @@
+node {
+    cleanWs()
+    def mvnHome
+    stage('Preparation') {
+        git 'https://github.com/HouariZegai/Calculator.git'
+        mvnHome = tool 'maven386'
+    }
+    stage('Build') {
+        withEnv(["MVN_HOME=$mvnHome"]) {
+            sh '"$MVN_HOME/bin/mvn" -Dmaven.test.failure.ignore clean package'
+        }
+    }
+    stage('Results') {
+        archiveArtifacts 'target/*.jar'
+    }
+}
