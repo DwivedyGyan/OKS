@@ -120,7 +120,6 @@ resource "oci_containerengine_node_pool" "test_node_pool" {
         ocpus = var.node_pool_node_shape_config_ocpus
     }
     node_source_details {
-        #Required
         image_id = "ocid1.image.oc1.ap-mumbai-1.aaaaaaaaykbqyfrl3pwkotoi7f5d32rqrfgdhwdh3hs3a2yzwt4r4qzjxicq"
         source_type = "IMAGE"
 
